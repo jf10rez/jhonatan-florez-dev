@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "about": "",
+    "principles": "",
+    "experience": "",
+    "systems": "",
+    "selectedWork": "",
+    "infrastructure": "",
+    "liveMetrics": "",
+    "contact": ""
+  },
+  "hero": {
+    "name": "",
+    "role": "",
+    "valueProposition": "",
+    "viewProjects": "",
+    "downloadResume": "",
+    "currently": {
+      "label": "",
+      "items": {
+        "aiAgents": "",
+        "infrastructure": "",
+        "saasProducts": ""
+      }
+    }
+  },
+  "about": {
+    "heading": "",
+    "paragraph": "",
+    "metrics": {
+      "yearsExperience": "",
+      "projectsDelivered": "",
+      "systemsDeployed": "",
+      "technologies": ""
+    }
+  },
+  "principles": {
+    "heading": "",
+    "items": {
+      "maintainability": "",
+      "automate": "",
+      "measure": "",
+      "ship": ""
+    }
+  },
+  "experience": {
+    "heading": "",
+    "challenge": "",
+    "actions": "",
+    "results": ""
+  },
+  "systems": {
+    "heading": "",
+    "tier": {
+      "full": "",
+      "architecture": "",
+      "development": ""
+    },
+    "problem": "",
+    "solution": "",
+    "impact": "",
+    "links": {
+      "repo": "",
+      "npm": "",
+      "demo": ""
+    },
+    "status": {
+      "private": "",
+      "deployed": "",
+      "inDevelopment": ""
+    }
+  },
+  "selectedWork": {
+    "heading": "",
+    "ndaLabel": ""
+  },
+  "infrastructure": {
+    "heading": "",
+    "nodeDescriptions": {}
+  },
+  "liveMetrics": {
+    "heading": "",
+    "github": {
+      "repos": "",
+      "stars": "",
+      "contributions": "",
+      "lastCommit": ""
+    },
+    "npm": {
+      "weeklyDownloads": ""
+    },
+    "uptime": "",
+    "deploy": "",
+    "status": {
+      "up": "",
+      "degraded": "",
+      "down": ""
+    },
+    "lastUpdated": ""
+  },
+  "contact": {
+    "heading": "",
+    "form": {
+      "name": "",
+      "email": "",
+      "message": "",
+      "submit": "",
+      "success": "",
+      "error": ""
+    }
+  },
+  "footer": {
+    "rights": "",
+    "builtWith": ""
+  }
+}
