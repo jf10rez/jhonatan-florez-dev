@@ -51,14 +51,14 @@ jobs:
       # 4. Instalar dependencias (solo PR)
       # -----------------------------------------------------------------------
       - name: Install dependencies
-        if: github.event_name == 'pull_request'
+        if: ${{ github.event_name == 'pull_request' }}
         run: pnpm install --frozen-lockfile
 
       # -----------------------------------------------------------------------
       # 5. Lint (solo PR)
       # -----------------------------------------------------------------------
       - name: Run linter
-        if: github.event_name == 'pull_request'
+        if: ${{ github.event_name == 'pull_request' }}
         run: pnpm run lint
 
       # -----------------------------------------------------------------------
@@ -113,13 +113,14 @@ jobs:
       # -----------------------------------------------------------------------
       - name: Image digest
         if: github.event_name != 'pull_request'
-        run: echo "Image pushed: ${{ steps.build.outputs.digest }}"
+        run: |
+          echo "Image pushed: ${{ steps.build.outputs.digest }}"
 
   deploy:
     needs: build
 
     # Solo despliega cuando hay push a master
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
 
     runs-on: ubuntu-latest
 
