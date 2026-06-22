@@ -96,7 +96,8 @@
       "message": "Mensaje",
       "submit": "Enviar Mensaje",
       "success": "Mensaje enviado. Me pondré en contacto pronto.",
-      "error": "Algo salió mal. Inténtalo de nuevo."
+      "error": "Algo salió mal. Inténtalo de nuevo.",
+      "rateLimited": "Has enviado demasiados mensajes. Inténtalo de nuevo más tarde."
     },
     "errors": {
       "nameRequired": "El nombre es obligatorio",

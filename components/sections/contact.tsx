@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -46,7 +46,24 @@ const socialLinks = [
 
 export function Contact() {
   const t = useTranslations("contact")
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error" | "rate-limited"
+  >("idle")
+  const [retryAfter, setRetryAfter] = useState(0)
+
+  useEffect(() => {
+    if (status !== "rate-limited" || retryAfter <= 0) return
+    const timer = setInterval(() => {
+      setRetryAfter((prev) => {
+        if (prev <= 1) {
+          setStatus("idle")
+          return 0
+        }
+        return prev - 1
+      })
+    }, 1000)
+    return () => clearInterval(timer)
+  }, [status, retryAfter])
 
   const schema = z.object({
     name: z.string().min(1, t("errors.nameRequired")),
@@ -72,6 +89,12 @@ export function Contact() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       })
+      if (res.status === 429) {
+        const seconds = Number(res.headers.get("Retry-After")) || 0
+        setRetryAfter(seconds)
+        setStatus("rate-limited")
+        return
+      }
       setStatus(res.ok ? "success" : "error")
     } catch {
       setStatus("error")
@@ -197,10 +220,17 @@ export function Contact() {
                   </p>
                 )}
 
+                {status === "rate-limited" && (
+                  <p className="text-sm text-[#ff3b30]" role="alert">
+                    {t("form.rateLimited")}
+                    {retryAfter > 0 && ` (${Math.floor(retryAfter / 60)}:${String(retryAfter % 60).padStart(2, "0")})`}
+                  </p>
+                )}
+
                 <Button
                   type="submit"
                   className="w-full"
-                  disabled={status === "submitting"}
+                  disabled={status === "submitting" || status === "rate-limited"}
                 >
                   {status === "submitting" ? "..." : t("form.submit")}
                 </Button>

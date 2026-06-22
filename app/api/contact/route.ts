@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
+import { checkRateLimit } from "@/lib/rate-limit"
 
 function escapeHtml(text: string): string {
   return text
@@ -12,6 +13,18 @@ function escapeHtml(text: string): string {
 
 export async function POST(request: Request) {
   try {
+    const { rateLimited, retryAfter } = checkRateLimit(request)
+
+    if (rateLimited) {
+      return NextResponse.json(
+        { error: "Rate limit exceeded" },
+        {
+          status: 429,
+          headers: { "Retry-After": String(retryAfter) },
+        }
+      )
+    }
+
     const body = await request.json()
 
     if (!body.name || !body.email || !body.message) {
