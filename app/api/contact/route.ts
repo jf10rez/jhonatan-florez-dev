@@ -1,4 +1,14 @@
 import { NextResponse } from "next/server"
+import nodemailer from "nodemailer"
+
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;")
+}
 
 export async function POST(request: Request) {
   try {
@@ -11,7 +21,66 @@ export async function POST(request: Request) {
       )
     }
 
-    // TODO: connect to email service in a later phase
+    const smtpHost = process.env.SMTP_HOST
+    const smtpPort = process.env.SMTP_PORT
+    const smtpUser = process.env.SMTP_USER
+    const smtpPass = process.env.SMTP_PASS
+    const emailTo = process.env.CONTACT_EMAIL_TO
+    const emailFrom = process.env.CONTACT_EMAIL_FROM
+
+    if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !emailTo || !emailFrom) {
+      console.error("[contact] Missing SMTP environment variables")
+      return NextResponse.json(
+        { error: "Email service not configured" },
+        { status: 500 }
+      )
+    }
+
+    const transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: Number(smtpPort),
+      secure: Number(smtpPort) === 465,
+      auth: {
+        user: smtpUser,
+        pass: smtpPass,
+      },
+    })
+
+    const htmlBody = `
+      <h2>Nuevo mensaje de contacto</h2>
+      <p><strong>Nombre:</strong> ${escapeHtml(body.name)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(body.email)}</p>
+      <p><strong>Mensaje:</strong></p>
+      <p style="white-space: pre-wrap;">${escapeHtml(body.message)}</p>
+      <hr />
+      <p style="font-size: 12px; color: #666;">
+        Enviado el ${new Date().toLocaleString("es-ES", {
+          dateStyle: "full",
+          timeStyle: "short",
+        })}
+      </p>
+    `
+
+    const textBody = `
+Nuevo mensaje de contacto
+
+Nombre: ${body.name}
+Email: ${body.email}
+Mensaje:
+${body.message}
+
+Enviado el: ${new Date().toLocaleString("es-ES")}
+    `.trim()
+
+    await transporter.sendMail({
+      from: `"Portfolio JF" <${emailFrom}>`,
+      to: emailTo,
+      replyTo: body.email,
+      subject: `Nuevo mensaje de contacto — ${body.name}`,
+      text: textBody,
+      html: htmlBody,
+    })
+
     return NextResponse.json({ success: true }, { status: 200 })
   } catch {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 })
