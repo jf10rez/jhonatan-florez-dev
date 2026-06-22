@@ -160,7 +160,13 @@
     "heading": "Selected Work",
     "ndaLabel": "Work done at {company} — code under NDA",
     "roleLabel": "Role",
-    "viewProject": "View project"
+    "viewProject": "View project",
+    "titles": {
+      "atri": "Atri",
+      "cotizaciones": "Quotations",
+      "formacol": "Formacol",
+      "sicor": "Sicor"
+    }
   },
   "liveMetrics": {
     "heading": "Live Metrics",

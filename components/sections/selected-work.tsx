@@ -3,6 +3,11 @@ import { getTranslations } from "next-intl/server"
 
 import { selectedWork } from "@/content/selected-work"
 import { workPlaceholderMeta } from "@/content/work-placeholders"
+import { LazyVideo } from "@/components/ui/lazy-video"
+
+function isVideoUrl(url: string) {
+  return url.endsWith(".mp4") || url.endsWith(".webm") || url.endsWith(".mov")
+}
 
 export async function SelectedWork() {
   const t = await getTranslations("selectedWork")
@@ -26,22 +31,31 @@ export async function SelectedWork() {
             >
               <div className="relative aspect-video w-full overflow-hidden bg-[#111111]">
                 {project.screenshots[0] ? (
-                  <Image
-                    src={project.screenshots[0]}
-                    alt={`${project.title} screenshot`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    loading="lazy"
-                    placeholder={
-                      workPlaceholderMeta[project.screenshots[0]]
-                        ? "blur"
-                        : undefined
-                    }
-                    blurDataURL={
-                      workPlaceholderMeta[project.screenshots[0]]?.blurDataURL
-                    }
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  />
+                  isVideoUrl(project.screenshots[0]) ? (
+                    <LazyVideo
+                      src={project.screenshots[0]}
+                      alt={`${project.title} screenshot`}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                  ) : (
+                    <Image
+                      src={project.screenshots[0]}
+                      alt={`${project.title} screenshot`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      loading="lazy"
+                      placeholder={
+                        workPlaceholderMeta[project.screenshots[0]]
+                          ? "blur"
+                          : undefined
+                      }
+                      blurDataURL={
+                        workPlaceholderMeta[project.screenshots[0]]
+                          ?.blurDataURL
+                      }
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                  )
                 ) : (
                   <div className="flex h-full w-full items-center justify-center bg-[#111111] text-xs text-[#a1a1aa]">
                     {t("ndaLabel", { company: project.company })}
@@ -66,7 +80,7 @@ export async function SelectedWork() {
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="text-lg font-bold tracking-tight text-white">
-                      {project.title}
+                      {t(`titles.${project.id}`)}
                     </h3>
                     <p className="mt-1 text-sm text-[#a1a1aa]">
                       {project.company}
