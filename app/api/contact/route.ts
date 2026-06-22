@@ -25,13 +25,22 @@ export async function POST(request: Request) {
     const smtpPort = process.env.SMTP_PORT
     const smtpUser = process.env.SMTP_USER
     const smtpPass = process.env.SMTP_PASS
-    const emailTo = process.env.CONTACT_EMAIL_TO
-    const emailFrom = process.env.CONTACT_EMAIL_FROM
+    const emailTo = process.env.BOOKING_EMAIL_TO
+    const emailFrom = process.env.BOOKING_EMAIL_FROM
 
-    if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !emailTo || !emailFrom) {
-      console.error("[contact] Missing SMTP environment variables")
+    const missing = [
+      !smtpHost && "SMTP_HOST",
+      !smtpPort && "SMTP_PORT",
+      !smtpUser && "SMTP_USER",
+      !smtpPass && "SMTP_PASS",
+      !emailTo && "BOOKING_EMAIL_TO",
+      !emailFrom && "BOOKING_EMAIL_FROM",
+    ].filter(Boolean)
+
+    if (missing.length > 0) {
+      console.error("[contact] Missing environment variables:", missing.join(", "))
       return NextResponse.json(
-        { error: "Email service not configured" },
+        { error: "Email service not configured", missing },
         { status: 500 }
       )
     }

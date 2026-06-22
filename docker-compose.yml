@@ -18,22 +18,12 @@ services:
       - "127.0.0.1:3001:3000"
     
     # Variables de entorno de runtime
+    env_file:
+      - .env
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
       - PORT=3000
-      # Variables de entorno
-      - SITE_URL=${SITE_URL}
-      - GITHUB_USERNAME=${GITHUB_USERNAME}
-      - GITHUB_TOKEN=${GITHUB_TOKEN}
-      - UPTIME_API_URL=${UPTIME_API_URL}
-      - UPTIME_API_KEY=${UPTIME_API_KEY}
-      - SMTP_HOST=${SMTP_HOST}
-      - SMTP_PORT=${SMTP_PORT}
-      - SMTP_USER=${SMTP_USER}
-      - SMTP_PASS=${SMTP_PASS}
-      - CONTACT_EMAIL_TO=${CONTACT_EMAIL_TO}
-      - CONTACT_EMAIL_FROM=${CONTACT_EMAIL_FROM}
     
     # Healthcheck — verifica que la aplicación responde correctamente
     healthcheck:
