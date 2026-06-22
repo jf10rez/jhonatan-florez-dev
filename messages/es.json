@@ -6,6 +6,7 @@
   "nav": {
     "hero": "Inicio",
     "about": "Sobre mí",
+    "technologies": "Tecnologías",
     "projects": "Proyectos",
     "contact": "Contacto"
   },
@@ -35,6 +36,10 @@
       "systemsDeployed": "Sistemas Desplegados",
       "technologies": "Tecnologías"
     }
+  },
+  "technologies": {
+    "heading": "Tecnologías",
+    "subtitle": "Stack y herramientas que uso para diseñar, construir y desplegar sistemas en producción."
   },
   "experience": {
     "heading": "Experiencia",

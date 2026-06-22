@@ -50,6 +50,7 @@ export const siteConfig: SiteConfig = {
   nav: [
     { id: "hero", labelKey: "nav.hero" },
     { id: "about", labelKey: "nav.about" },
+    { id: "technologies", labelKey: "nav.technologies" },
     { id: "projects", labelKey: "nav.projects" },
     { id: "contact", labelKey: "nav.contact" },
   ],

@@ -6,6 +6,7 @@
   "nav": {
     "hero": "Home",
     "about": "About",
+    "technologies": "Technologies",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -35,6 +36,10 @@
       "systemsDeployed": "Systems Deployed",
       "technologies": "Technologies"
     }
+  },
+  "technologies": {
+    "heading": "Technologies",
+    "subtitle": "Stack & tools I use to design, build, and ship production systems."
   },
   "experience": {
     "heading": "Experience",

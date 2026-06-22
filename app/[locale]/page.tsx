@@ -9,6 +9,7 @@ import { Hero } from "@/components/sections/hero"
 import { LiveMetrics } from "@/components/sections/live-metrics"
 import { SelectedWork } from "@/components/sections/selected-work"
 import { Systems } from "@/components/sections/systems"
+import { Technologies } from "@/components/sections/technologies"
 import { routing } from "@/i18n/routing"
 
 type Props = {
@@ -29,6 +30,7 @@ export default async function IndexPage({ params }: Props) {
       <main className="flex flex-col pt-14">
         <Hero />
         <About />
+        <Technologies />
         <Experience />
         <Systems />
         <SelectedWork />
