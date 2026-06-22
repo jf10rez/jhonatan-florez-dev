@@ -22,11 +22,11 @@ export async function About() {
         </h2>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-3">
-          <div className="grid grid-cols-3 gap-4 lg:col-span-2 lg:gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:col-span-2 lg:gap-6">
             {metricKeys.map(({ key, value, suffix }) => (
               <div
                 key={key}
-                className="rounded-lg border border-[rgba(255,59,48,0.2)] bg-[rgba(10,10,10,0.8)] p-6 text-center backdrop-blur-sm transition-all hover:border-[rgba(255,59,48,0.4)] hover:shadow-[0_0_15px_rgba(255,59,48,0.15)]"
+                className="rounded-lg border border-[rgba(255,59,48,0.2)] bg-[rgba(10,10,10,0.8)] p-4 text-center backdrop-blur-sm transition-all hover:border-[rgba(255,59,48,0.4)] hover:shadow-[0_0_15px_rgba(255,59,48,0.15)] sm:p-6"
               >
                 <span className="block text-4xl font-bold tracking-tight text-[#ff3b30] sm:text-5xl font-mono">
                   {value}{suffix}

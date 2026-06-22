@@ -31,7 +31,7 @@ export function Hero() {
           {t("hello")}
         </p>
 
-        <h1 className="mt-2 text-6xl font-black tracking-tight text-white sm:text-7xl md:text-8xl lg:text-9xl">
+        <h1 className="mt-2 text-4xl font-black tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
           JHONATAN FLOREZ
         </h1>
 
