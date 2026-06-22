@@ -1,0 +1,45 @@
+# =============================================================================
+# portfolio-jf — docker-compose.yml (Alternativa A: Puerto Localhost)
+# =============================================================================
+# Objetivo: Docker Compose para VPS con Nginx externo.
+# El contenedor expone SOLO en localhost:3001, no accesible desde internet.
+# Nginx (instalado en el host) hace proxy_pass a http://127.0.0.1:3001
+# =============================================================================
+
+services:
+  portfolio:
+    image: jf10rez/jhonatan-florez-dev:latest
+    container_name: portfolio-jf
+    restart: unless-stopped
+    
+    # SOLO exponer en localhost. Nginx en el host hará proxy.
+    # Esto significa que el puerto 3001 NO es accesible desde fuera del VPS.
+    ports:
+      - "127.0.0.1:3001:3000"
+    
+    # Variables de entorno de runtime
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      - PORT=3000
+      # Variables de entorno (descomentar cuando se necesiten):
+      - SITE_URL=${SITE_URL}
+      - GITHUB_USERNAME=${GITHUB_USERNAME}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - UPTIME_API_URL=${UPTIME_API_URL}
+      - UPTIME_API_KEY=${UPTIME_API_KEY}
+    
+    # Healthcheck — verifica que la aplicación responde correctamente
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/api/health', (r) => r.statusCode === 200 ? process.exit(0) : process.exit(1)).on('error', () => process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      start_period: 40s
+      retries: 3
+    
+    # Logging controlado
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
