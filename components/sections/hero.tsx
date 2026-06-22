@@ -51,8 +51,9 @@ export function Hero() {
             {t("viewProjects")}
           </Link>
           <a
-            href="/resume.pdf"
-            download
+            href="https://media.jhonatan-florez.dev/media/Curriculum-JhonF-Updated.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
           >
             <Download className="mr-2 size-4" aria-hidden="true" />

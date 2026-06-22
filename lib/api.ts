@@ -14,14 +14,8 @@ export type NpmMetrics = {
   weeklyDownloads: number
 }
 
-export type UptimeStatus = "up" | "degraded" | "down"
-
-export type DeployStatus = "ready" | "building" | "error"
-
 export type MetricsResponse = {
   github: GithubMetrics | null
   npm: NpmMetrics | null
-  uptime: { status: UptimeStatus; uptimePercent: number } | null
-  deploy: { status: DeployStatus; lastDeploy: string | null } | null
   fetchedAt: number
 }

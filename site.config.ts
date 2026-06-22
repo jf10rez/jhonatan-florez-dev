@@ -18,15 +18,7 @@ export type NavSection = {
 
 export type Brand = "personal"
 
-export type UptimeProvider = "betterstack" | "uptimerobot" | "none"
-
-export type DeployPlatform = "vercel" | "cloudflare" | "none"
-
-export type MetricsConfig = {
-  uptimeProvider: UptimeProvider
-  uptimeApiUrl: string | null
-  deployPlatform: DeployPlatform
-}
+export type MetricsConfig = Record<string, never>
 
 export type SiteConfig = {
   name: string
@@ -37,7 +29,6 @@ export type SiteConfig = {
   palette: Palette
   nav: NavSection[]
   brand: Brand
-  metrics: MetricsConfig
 }
 
 export const siteConfig: SiteConfig = {
@@ -63,9 +54,4 @@ export const siteConfig: SiteConfig = {
     { id: "contact", labelKey: "nav.contact" },
   ],
   brand: "personal",
-  metrics: {
-    uptimeProvider: "none",
-    uptimeApiUrl: null,
-    deployPlatform: "none",
-  },
 }

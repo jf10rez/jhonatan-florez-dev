@@ -36,16 +36,6 @@ export async function LiveMetrics() {
     npm: {
       weeklyDownloads: t("npm.weeklyDownloads"),
     },
-    uptime: t("uptime"),
-    deploy: t("deploy"),
-    status: {
-      up: t("status.up"),
-      degraded: t("status.degraded"),
-      down: t("status.down"),
-      ready: t("status.ready"),
-      building: t("status.building"),
-      error: t("status.error"),
-    },
   }
 
   return (

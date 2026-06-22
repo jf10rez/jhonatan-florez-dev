@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Menu } from "lucide-react"
 
 import { buttonVariants } from "@/components/ui/button"
@@ -20,6 +20,29 @@ import { LangSwitch } from "./lang-switch"
 export function Header() {
   const t = useTranslations("nav")
   const [open, setOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("hero")
+
+  useEffect(() => {
+    const navIds = siteConfig.nav.map((item) => item.id)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    navIds.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[rgba(255,59,48,0.2)] bg-[rgba(5,5,5,0.8)] backdrop-blur-md">
@@ -36,8 +59,13 @@ export function Header() {
           {siteConfig.nav.map((item) => (
             <Link
               key={item.id}
-              href={`/#${item.id}`}
-              className="text-xs font-medium uppercase tracking-widest text-[#a1a1aa] transition-colors hover:text-[#ff3b30]"
+              href={item.id === "hero" ? "/" : `/#${item.id}`}
+              className={cn(
+                "text-xs font-medium uppercase tracking-widest transition-colors hover:text-[#ff3b30]",
+                activeSection === item.id
+                  ? "text-[#ff3b30]"
+                  : "text-[#a1a1aa]"
+              )}
             >
               {t(item.labelKey.replace("nav.", ""))}
             </Link>
@@ -65,9 +93,14 @@ export function Header() {
               {siteConfig.nav.map((item) => (
                 <Link
                   key={item.id}
-                  href={`/#${item.id}`}
+                  href={item.id === "hero" ? "/" : `/#${item.id}`}
                   onClick={() => setOpen(false)}
-                  className="text-lg font-medium uppercase tracking-wider text-[#a1a1aa] transition-colors hover:text-[#ff3b30]"
+                  className={cn(
+                    "text-lg font-medium uppercase tracking-wider transition-colors hover:text-[#ff3b30]",
+                    activeSection === item.id
+                      ? "text-[#ff3b30]"
+                      : "text-[#a1a1aa]"
+                  )}
                 >
                   {t(item.labelKey.replace("nav.", ""))}
                 </Link>

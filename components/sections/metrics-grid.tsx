@@ -3,8 +3,7 @@
 import { useEffect, useMemo, useState } from "react"
 import { useTranslations } from "next-intl"
 
-import { cn } from "@/lib/utils"
-import type { DeployStatus, MetricsResponse, UptimeStatus } from "@/lib/api"
+import type { MetricsResponse } from "@/lib/api"
 
 type Labels = {
   heading: string
@@ -17,16 +16,6 @@ type Labels = {
   }
   npm: {
     weeklyDownloads: string
-  }
-  uptime: string
-  deploy: string
-  status: {
-    up: string
-    degraded: string
-    down: string
-    ready: string
-    building: string
-    error: string
   }
 }
 
@@ -66,26 +55,11 @@ function formatRelativeTime(dateInput: string | number | Date | null | undefined
   return rtf.format(-Math.floor(seconds / 31536000), "year")
 }
 
-function StatusDot({
-  status,
-  animate = false,
-}: {
-  status: UptimeStatus | DeployStatus | "up" | "degraded" | "down" | "ready" | "building" | "error"
-  animate?: boolean
-}) {
-  const color =
-    status === "up" || status === "ready"
-      ? "bg-[#10b981]"
-      : status === "degraded" || status === "building"
-        ? "bg-[#f59e0b]"
-        : "bg-[#ff3b30]"
-
+function GreenDot() {
   return (
     <span className="relative flex h-2 w-2">
-      {animate && (status === "up" || status === "ready") && (
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#10b981] opacity-75" />
-      )}
-      <span className={cn("relative inline-flex h-2 w-2 rounded-full", color)} />
+      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#10b981] opacity-75" />
+      <span className="relative inline-flex h-2 w-2 rounded-full bg-[#10b981]" />
     </span>
   )
 }
@@ -122,13 +96,10 @@ export function MetricsGrid({ initialData, labels }: Props) {
   const cards = useMemo(() => {
     const github = data?.github
     const npm = data?.npm
-    const uptime = data?.uptime
-    const deploy = data?.deploy
 
     return [
       {
         id: "github",
-        status: github ? "up" : ("down" as UptimeStatus),
         value: formatNumber(github?.repos),
         label: labels.github.repos,
         sublabel: github
@@ -137,32 +108,17 @@ export function MetricsGrid({ initialData, labels }: Props) {
       },
       {
         id: "npm",
-        status: npm ? "up" : ("down" as UptimeStatus),
         value: formatNumber(npm?.weeklyDownloads),
         label: labels.npm.weeklyDownloads,
-        sublabel: npm ? labels.status.ready : "—",
-      },
-      {
-        id: "uptime",
-        status: uptime?.status ?? ("down" as UptimeStatus),
-        value: uptime ? `${uptime.uptimePercent.toFixed(2)}%` : "—",
-        label: labels.uptime,
-        sublabel: uptime ? labels.status[uptime.status] : "—",
-      },
-      {
-        id: "deploy",
-        status: deploy?.status ?? ("error" as DeployStatus),
-        value: deploy ? labels.status[deploy.status] : "—",
-        label: labels.deploy,
-        sublabel: deploy ? formatRelativeTime(deploy.lastDeploy) : "—",
+        sublabel: npm ? t("status.ready") : "—",
       },
     ]
-  }, [data, labels])
+  }, [data, labels, t])
 
   if (isLoading) {
     return (
       <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-        {Array.from({ length: 4 }).map((_, i) => (
+        {Array.from({ length: 2 }).map((_, i) => (
           <div
             key={i}
             className="rounded-lg border border-[rgba(255,59,48,0.2)] bg-[rgba(10,10,10,0.8)] p-6 animate-pulse"
@@ -191,7 +147,7 @@ export function MetricsGrid({ initialData, labels }: Props) {
             className="flex flex-col rounded-lg border border-[rgba(255,59,48,0.2)] bg-[rgba(10,10,10,0.8)] p-6 backdrop-blur-sm transition-all hover:border-[rgba(255,59,48,0.4)] hover:shadow-[0_0_15px_rgba(255,59,48,0.15)]"
           >
             <div className="flex items-center gap-2">
-              <StatusDot status={card.status} animate={card.id === "uptime" || card.id === "deploy"} />
+              <GreenDot />
               <span className="font-mono text-xs uppercase tracking-widest text-[#a1a1aa]">
                 {card.label}
               </span>

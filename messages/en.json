@@ -44,15 +44,15 @@
     "items": {
       "integro": {
         "challenge": "Lead the development of scalable fullstack solutions and AI automations for enterprise clients.",
-        "action1": "Designed and developed web applications with Next.js, TypeScript and serverless architectures.",
+        "action1": "Designed and developed web applications with Next.js, TypeScript and clean architectures.",
         "action2": "Implemented AI automation systems to optimize business processes.",
-        "action3": "Managed cloud infrastructure and CI/CD pipelines on AWS.",
+        "action3": "Managed cloud infrastructure and CI/CD pipelines on Github actions.",
         "result1": "Delivered multiple enterprise projects with high impact.",
         "result2": "3+ years of continuous experience at the company."
       },
       "dms": {
         "challenge": "Develop quality software for diverse clients under tight deadlines.",
-        "action1": "Developed fullstack applications with React and Node.js.",
+        "action1": "Developed fullstack applications with React, Node.js and C#.",
         "action2": "Collaborated on database architecture and performance optimization.",
         "result1": "Successfully delivered multiple projects.",
         "result2": "7 months of significant contributions."
@@ -79,8 +79,8 @@
         "result2": "5 months of specialized development."
       },
       "doctus": {
-        "challenge": "Develop digital health platform from its inception.",
-        "action1": "Built user interfaces with React.",
+        "challenge": "Internship, creating software and verifying quality processes.",
+        "action1": "Built user interfaces with .NET and Angular.",
         "action2": "Developed backend APIs and services with Node.js.",
         "result1": "Contributed to platform launch.",
         "result2": "7 months of fullstack development."
@@ -139,27 +139,28 @@
         "metric": "CEO & Founder"
       },
       "aiChatbot": {
-        "problem": "[TODO] Add the real problem the chatbot solved.",
-        "solution": "[TODO] Add the real solution and key design decisions.",
-        "impact": "[TODO] Add the real impact.",
-        "metric": "[TODO]"
+        "problem": "In many companies, traditional chatbots cannot handle complex queries or provide personalized experiences.",
+        "solution": "Developed an advanced AI chatbot using cutting-edge language models, integrated with internal systems to provide accurate and personalized responses.",
+        "impact": "Improved customer satisfaction and reduced response times.",
+        "metric": "Owner"
       },
       "openclaw": {
-        "problem": "[TODO] Add the real problem the agent system solved.",
-        "solution": "[TODO] Add the real solution and key design decisions.",
-        "impact": "[TODO] Add the real impact.",
-        "metric": "[TODO]"
+        "problem": "Loss of time and resources on repetitive tasks that could be automated with AI agents.",
+        "solution": "Developed an AI agent system that automates complex tasks by integrating language models with automation tools.",
+        "impact": "Improved operational efficiency and reduced execution time.",
+        "metric": "Owner"
       },
       "langPlatform": {
-        "problem": "[TODO] Add the real problem the platform addresses.",
-        "solution": "[TODO] Add the planned solution and architecture.",
-        "impact": "[TODO] Add the expected impact."
+        "problem": "There is no efficient method for everyone to learn English in their own way and pace, with content relevant to their interests and needs.",
+        "solution": "Developed an AI-powered language learning platform that personalizes content and learning activities based on each user's interests, level and goals.",
+        "impact": "Users can learn English more effectively and engagingly, with content relevant to their needs.",
+        "metric": "Owner"
       }
     }
   },
   "selectedWork": {
     "heading": "Selected Work",
-    "ndaLabel": "Work done at {company} — code under NDA",
+    "ndaLabel": "Work done at companies — code under NDA",
     "roleLabel": "Role",
     "viewProject": "View project",
     "titles": {
@@ -181,15 +182,8 @@
     "npm": {
       "weeklyDownloads": "Weekly Downloads"
     },
-    "uptime": "Uptime",
-    "deploy": "Deploy",
     "status": {
-      "up": "Operational",
-      "degraded": "Degraded",
-      "down": "Down",
-      "ready": "Ready",
-      "building": "Building",
-      "error": "Error"
+      "ready": "Ready"
     },
     "lastUpdated": "Updated {time}"
   },

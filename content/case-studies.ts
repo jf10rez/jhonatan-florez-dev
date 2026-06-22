@@ -43,7 +43,7 @@ export const caseStudies: CaseStudy[] = [
     solutionKey: "ilaxus.solution",
     impactKey: "ilaxus.impact",
     impactMetricKey: "ilaxus.metric",
-    stack: ["AI Automation", "Next.js", "TypeScript", "OpenAI", "n8n", "Make"],
+    stack: ["AI Automation", "Next.js", "TypeScript", "Openclaw", "n8n"],
     demoUrl: "https://ilaxus.com",
     status: "deployed",
   },
@@ -55,11 +55,11 @@ export const caseStudies: CaseStudy[] = [
     solutionKey: "aiChatbot.solution",
     impactKey: "aiChatbot.impact",
     impactMetricKey: "aiChatbot.metric",
-    stack: ["Next.js", "TypeScript", "OpenAI", "Node.js"],
+    stack: ["React", "TypeScript", "Gemini", "Node.js", "MongoDB", "Postgres"],
     // TODO(jhonatan): replace with real repository and package names
-    repoUrl: "https://github.com/<user>/<repo>",
-    npmUrl: "https://www.npmjs.com/package/<pkg>",
-    npmPackage: "<pkg>",
+    repoUrl: "https://github.com/jf10rez/chat-bot",
+    npmUrl: "https://www.npmjs.com/package/chatbot-sdk-integro",
+    npmPackage: "chatbot-sdk-integro",
   },
   {
     id: "openclaw",
@@ -96,7 +96,7 @@ export const caseStudies: CaseStudy[] = [
     impactKey: "langPlatform.impact",
     stack: ["Next.js", "TypeScript", "PostgreSQL"],
     // TODO(jhonatan): replace with real repository name
-    repoUrl: "https://github.com/<user>/<repo>",
+    repoUrl: "https://github.com/jf10rez/personal-teacher-english-ai",
     status: "in-development",
   },
 ]

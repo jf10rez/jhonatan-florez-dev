@@ -12,7 +12,7 @@
   "hero": {
     "hello": "Hola, soy",
     "name": "JHONATAN FLOREZ",
-    "role": "Ingeniero Full Stack — Sistemas de IA y Automatización",
+    "role": "Ingeniero Full Stack — Sistemas completos, IA e Infraestructura",
     "valueProposition": "Diseño y construyo sistemas de producción que combinan arquitectura limpia, automatización e IA para resolver problemas reales de negocio.",
     "viewProjects": "Ver Proyectos",
     "downloadResume": "Descargar CV",
@@ -44,15 +44,15 @@
     "items": {
       "integro": {
         "challenge": "Liderar el desarrollo de soluciones fullstack escalables y automatizaciones con IA para clientes empresariales.",
-        "action1": "Diseñé y desarrollé aplicaciones web con Next.js, TypeScript y arquitecturas serverless.",
+        "action1": "Diseñé y desarrollé aplicaciones web con Next.js, TypeScript y arquitecturas limpias.",
         "action2": "Implementé sistemas de automatización con IA para optimizar procesos de negocio.",
-        "action3": "Gestioné infraestructura cloud y pipelines CI/CD en AWS.",
+        "action3": "Gestioné infraestructura cloud y pipelines CI/CD usando Github actions.",
         "result1": "Entregué múltiples proyectos enterprise con alto impacto.",
         "result2": "3+ años de experiencia continua en la empresa."
       },
       "dms": {
         "challenge": "Desarrollar software de calidad para clientes diversos en plazos ajustados.",
-        "action1": "Desarrollé aplicaciones fullstack con React y Node.js.",
+        "action1": "Desarrollé aplicaciones fullstack con React, Node.js y C#.",
         "action2": "Colaboré en arquitectura de bases de datos y optimización de rendimiento.",
         "result1": "Entregué múltiples proyectos exitosamente.",
         "result2": "7 meses de contribuciones significativas."
@@ -79,8 +79,8 @@
         "result2": "5 meses de desarrollo especializado."
       },
       "doctus": {
-        "challenge": "Desarrollar plataforma de salud digital desde sus inicios.",
-        "action1": "Construí interfaces de usuario con React.",
+        "challenge": "Practicas empresariales, creando software y verificando procesos de calidad.",
+        "action1": "Construí interfaces de usuario con C# y Angular.",
         "action2": "Desarrollé APIs y servicios backend con Node.js.",
         "result1": "Contribuí al lanzamiento de la plataforma.",
         "result2": "7 meses de desarrollo fullstack."
@@ -139,27 +139,28 @@
         "metric": "CEO & Founder"
       },
       "aiChatbot": {
-        "problem": "[TODO] Añade el problema real que resolvió el chatbot.",
-        "solution": "[TODO] Añade la solución real y decisiones clave de diseño.",
-        "impact": "[TODO] Añade el impacto real.",
-        "metric": "[TODO]"
+        "problem": "En muchas empresas, los chatbots tradicionales no pueden manejar consultas complejas o proporcionar experiencias personalizadas.",
+        "solution": "Desarrollé un chatbot de IA avanzado utilizando modelos de lenguaje de última generación, integrado con sistemas internos para proporcionar respuestas precisas y personalizadas.",
+        "impact": "Mejora en la satisfacción del cliente y reducción en el tiempo de respuesta.",
+        "metric": "Propietario"
       },
       "openclaw": {
-        "problem": "[TODO] Añade el problema real que resolvió el sistema de agentes.",
-        "solution": "[TODO] Añade la solución real y decisiones clave de diseño.",
-        "impact": "[TODO] Añade el impacto real.",
-        "metric": "[TODO]"
+        "problem": "Perdida de tiempo y recursos en tareas repetitivas que podrían ser automatizadas con agentes de IA.",
+        "solution": "Desarrollé un sistema de agentes de IA que automatiza tareas complejas mediante la integración de modelos de lenguaje con herramientas de automatización.",
+        "impact": "Mejora en la eficiencia operativa y reducción en el tiempo de ejecución.",
+        "metric": "Propietario"
       },
       "langPlatform": {
-        "problem": "[TODO] Añade el problema real que resuelve la plataforma.",
-        "solution": "[TODO] Añade la solución planeada y arquitectura.",
-        "impact": "[TODO] Añade el impacto esperado."
+        "problem": "No hay un metodo eficiente para que cada persona aprenda inglés a su manera y ritmo, con contenido relevante para sus intereses y necesidades.",
+        "solution": "Desarrollé una plataforma de aprendizaje de idiomas impulsada por IA que personaliza el contenido y las actividades de aprendizaje según los intereses, nivel y objetivos de cada usuario.",
+        "impact": "Los usuarios pueden aprender inglés de manera más efectiva y atractiva, con contenido relevante para sus necesidades.",
+        "metric": "Propietario"
       }
     }
   },
   "selectedWork": {
-    "heading": "Trabajo seleccionado",
-    "ndaLabel": "Trabajo realizado en {company} — código bajo NDA",
+    "heading": "Trabajos Seleccionados",
+    "ndaLabel": "Trabajo realizado en compañias — código bajo NDA",
     "roleLabel": "Rol",
     "viewProject": "Ver proyecto",
     "titles": {
@@ -181,15 +182,8 @@
     "npm": {
       "weeklyDownloads": "Descargas Semanales"
     },
-    "uptime": "Uptime",
-    "deploy": "Deploy",
     "status": {
-      "up": "Operacional",
-      "degraded": "Degradado",
-      "down": "Caído",
-      "ready": "Listo",
-      "building": "Construyendo",
-      "error": "Error"
+      "ready": "Listo"
     },
     "lastUpdated": "Actualizado {time}"
   },

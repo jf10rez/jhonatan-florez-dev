@@ -33,11 +33,11 @@ export const experience: ExperienceItem[] = [
   },
   {
     id: "dms",
-    company: "dms software",
+    company: "DMS software",
     role: "Software Developer",
     start: "Sep 2021",
     end: "Mar 2022",
-    stack: ["React", "Node.js", "TypeScript", "PostgreSQL"],
+    stack: ["React", "Node.js", "TypeScript", "PostgreSQL", "C#", "SQL Server"],
     challengeKey: "experience.items.dms.challenge",
     actionsKeys: [
       "experience.items.dms.action1",
@@ -55,7 +55,7 @@ export const experience: ExperienceItem[] = [
     role: "Software Developer",
     start: "Feb 2021",
     end: "Aug 2021",
-    stack: ["JavaScript", "React", "Node.js", "MySQL"],
+    stack: ["JavaScript", "React", "Node.js", "MySQL", "Angular", "Ionic", "React native", "Java"],
     challengeKey: "experience.items.confacaldas.challenge",
     actionsKeys: [
       "experience.items.confacaldas.action1",
@@ -91,7 +91,7 @@ export const experience: ExperienceItem[] = [
     role: "Software Engineer",
     start: "Dec 2019",
     end: "Apr 2020",
-    stack: ["SharePoint", "C#", ".NET", "JavaScript"],
+    stack: ["SharePoint", "C#", ".NET", "JavaScript", "Angularjs"],
     challengeKey: "experience.items.2share.challenge",
     actionsKeys: [
       "experience.items.2share.action1",
@@ -109,7 +109,7 @@ export const experience: ExperienceItem[] = [
     role: "Software Development Engineer",
     start: "Apr 2018",
     end: "Oct 2018",
-    stack: ["JavaScript", "React", "Node.js", "MySQL"],
+    stack: ["JavaScript", "React", "Node.js", "MySQL", "C#", "SQL Server"],
     challengeKey: "experience.items.doctus.challenge",
     actionsKeys: [
       "experience.items.doctus.action1",
