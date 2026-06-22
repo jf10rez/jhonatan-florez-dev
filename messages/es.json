@@ -1,116 +1,195 @@
 {
+  "metadata": {
+    "title": "Jhonatan Florez — Ingeniero Full Stack",
+    "description": "Portfolio de Jhonatan Florez, Ingeniero Full Stack especializado en Next.js, React, TypeScript, Node.js, Docker, PostgreSQL, sistemas de IA e infraestructura cloud."
+  },
   "nav": {
-    "about": "",
-    "principles": "",
-    "experience": "",
-    "systems": "",
-    "selectedWork": "",
-    "infrastructure": "",
-    "liveMetrics": "",
-    "contact": ""
+    "hero": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
   },
   "hero": {
-    "name": "",
-    "role": "",
-    "valueProposition": "",
-    "viewProjects": "",
-    "downloadResume": "",
+    "hello": "Hola, soy",
+    "name": "JHONATAN FLOREZ",
+    "role": "Ingeniero Full Stack — Sistemas de IA y Automatización",
+    "valueProposition": "Diseño y construyo sistemas de producción que combinan arquitectura limpia, automatización e IA para resolver problemas reales de negocio.",
+    "viewProjects": "Ver Proyectos",
+    "downloadResume": "Descargar CV",
     "currently": {
-      "label": "",
+      "label": "Actualmente",
       "items": {
-        "aiAgents": "",
-        "infrastructure": "",
-        "saasProducts": ""
+        "aiAgents": "Construyendo Agentes de IA",
+        "infrastructure": "Gestionando Infraestructura en Producción",
+        "saasProducts": "Desarrollando Productos SaaS"
       }
     }
   },
   "about": {
-    "heading": "",
-    "paragraph": "",
+    "heading": "Sobre mí",
+    "moreAbout": "Más Sobre Mí",
+    "paragraph": "Colaboro con equipos para convertir requisitos complejos en software confiable: backends escalables, interfaces pulidas e infraestructura que no te despierta a las 3am.",
     "metrics": {
-      "yearsExperience": "",
-      "projectsDelivered": "",
-      "systemsDeployed": "",
-      "technologies": ""
-    }
-  },
-  "principles": {
-    "heading": "",
-    "items": {
-      "maintainability": "",
-      "automate": "",
-      "measure": "",
-      "ship": ""
+      "yearsExperience": "Años de Experiencia",
+      "projectsDelivered": "Proyectos Entregados",
+      "systemsDeployed": "Sistemas Desplegados",
+      "technologies": "Tecnologías"
     }
   },
   "experience": {
-    "heading": "",
-    "challenge": "",
-    "actions": "",
-    "results": ""
+    "heading": "Experiencia",
+    "challenge": "Reto",
+    "actions": "Acciones",
+    "results": "Resultados",
+    "items": {
+      "integro": {
+        "challenge": "Liderar el desarrollo de soluciones fullstack escalables y automatizaciones con IA para clientes empresariales.",
+        "action1": "Diseñé y desarrollé aplicaciones web con Next.js, TypeScript y arquitecturas serverless.",
+        "action2": "Implementé sistemas de automatización con IA para optimizar procesos de negocio.",
+        "action3": "Gestioné infraestructura cloud y pipelines CI/CD en AWS.",
+        "result1": "Entregué múltiples proyectos enterprise con alto impacto.",
+        "result2": "3+ años de experiencia continua en la empresa."
+      },
+      "dms": {
+        "challenge": "Desarrollar software de calidad para clientes diversos en plazos ajustados.",
+        "action1": "Desarrollé aplicaciones fullstack con React y Node.js.",
+        "action2": "Colaboré en arquitectura de bases de datos y optimización de rendimiento.",
+        "result1": "Entregué múltiples proyectos exitosamente.",
+        "result2": "7 meses de contribuciones significativas."
+      },
+      "confacaldas": {
+        "challenge": "Modernizar sistemas internos y mejorar la experiencia digital para usuarios.",
+        "action1": "Desarrollé interfaces web responsivas con React.",
+        "action2": "Implementé APIs RESTful y integraciones con sistemas legacy.",
+        "result1": "Mejoré la experiencia de usuario en plataformas internas.",
+        "result2": "7 meses de desarrollo continuo."
+      },
+      "syqual10": {
+        "challenge": "Construir soluciones de software escalables para clientes empresariales.",
+        "action1": "Desarrollé aplicaciones web con React y Angular.",
+        "action2": "Implementé backend con Node.js y bases de datos NoSQL.",
+        "result1": "Entregué soluciones robustas para clientes.",
+        "result2": "9 meses de experiencia en desarrollo ágil."
+      },
+      "2share": {
+        "challenge": "Desarrollar soluciones SharePoint para clientes corporativos.",
+        "action1": "Programé web parts y soluciones personalizadas en SharePoint.",
+        "action2": "Implementé flujos de trabajo y automatizaciones con .NET.",
+        "result1": "Entregué soluciones SharePoint a medida.",
+        "result2": "5 meses de desarrollo especializado."
+      },
+      "doctus": {
+        "challenge": "Desarrollar plataforma de salud digital desde sus inicios.",
+        "action1": "Construí interfaces de usuario con React.",
+        "action2": "Desarrollé APIs y servicios backend con Node.js.",
+        "result1": "Contribuí al lanzamiento de la plataforma.",
+        "result2": "7 meses de desarrollo fullstack."
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contacto",
+    "available": "Disponible para nuevas oportunidades",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje",
+      "success": "Mensaje enviado. Me pondré en contacto pronto.",
+      "error": "Algo salió mal. Inténtalo de nuevo."
+    },
+    "errors": {
+      "nameRequired": "El nombre es obligatorio",
+      "emailInvalid": "Introduce un correo válido",
+      "messageMin": "El mensaje debe tener al menos 20 caracteres"
+    },
+    "social": {
+      "github": "GitHub",
+      "npm": "npm",
+      "linkedin": "LinkedIn",
+      "email": "Correo"
+    }
   },
   "systems": {
-    "heading": "",
+    "heading": "Proyectos",
     "tier": {
-      "full": "",
-      "architecture": "",
-      "development": ""
+      "full": "Caso de estudio completo",
+      "architecture": "Caso de arquitectura",
+      "development": "En desarrollo"
     },
-    "problem": "",
-    "solution": "",
-    "impact": "",
+    "problem": "Problema",
+    "solution": "Solución",
+    "impact": "Impacto",
     "links": {
-      "repo": "",
-      "npm": "",
-      "demo": ""
+      "repo": "GitHub",
+      "npm": "npm",
+      "demo": "Demo"
     },
     "status": {
-      "private": "",
-      "deployed": "",
-      "inDevelopment": ""
+      "private": "Privado",
+      "deployed": "Desplegado",
+      "inDevelopment": "En desarrollo"
+    },
+    "items": {
+      "ilaxus": {
+        "problem": "Las empresas necesitan automatizar procesos repetitivos y integrar IA en sus flujos de trabajo, pero carecen de expertise técnico para implementarlo.",
+        "solution": "Agencia de automatizaciones con IA que diseña e implementa soluciones personalizadas usando n8n, Make, OpenAI y otras herramientas no-code/low-code para optimizar procesos de negocio.",
+        "impact": "Empresas que automatizan sus procesos con IA, reduciendo tiempo operativo y aumentando eficiencia.",
+        "metric": "CEO & Founder"
+      },
+      "aiChatbot": {
+        "problem": "[TODO] Añade el problema real que resolvió el chatbot.",
+        "solution": "[TODO] Añade la solución real y decisiones clave de diseño.",
+        "impact": "[TODO] Añade el impacto real.",
+        "metric": "[TODO]"
+      },
+      "openclaw": {
+        "problem": "[TODO] Añade el problema real que resolvió el sistema de agentes.",
+        "solution": "[TODO] Añade la solución real y decisiones clave de diseño.",
+        "impact": "[TODO] Añade el impacto real.",
+        "metric": "[TODO]"
+      },
+      "langPlatform": {
+        "problem": "[TODO] Añade el problema real que resuelve la plataforma.",
+        "solution": "[TODO] Añade la solución planeada y arquitectura.",
+        "impact": "[TODO] Añade el impacto esperado."
+      }
     }
   },
   "selectedWork": {
-    "heading": "",
-    "ndaLabel": ""
-  },
-  "infrastructure": {
-    "heading": "",
-    "nodeDescriptions": {}
+    "heading": "Trabajo seleccionado",
+    "ndaLabel": "Trabajo realizado en {company} — código bajo NDA",
+    "roleLabel": "Rol",
+    "viewProject": "Ver proyecto"
   },
   "liveMetrics": {
-    "heading": "",
+    "heading": "Métricas en Vivo",
+    "live": "En vivo",
     "github": {
-      "repos": "",
-      "stars": "",
-      "contributions": "",
-      "lastCommit": ""
+      "repos": "Repositorios Públicos",
+      "stars": "Stars",
+      "contributions": "Contribuciones",
+      "lastCommit": "Último Commit"
     },
     "npm": {
-      "weeklyDownloads": ""
+      "weeklyDownloads": "Descargas Semanales"
     },
-    "uptime": "",
-    "deploy": "",
+    "uptime": "Uptime",
+    "deploy": "Deploy",
     "status": {
-      "up": "",
-      "degraded": "",
-      "down": ""
+      "up": "Operacional",
+      "degraded": "Degradado",
+      "down": "Caído",
+      "ready": "Listo",
+      "building": "Construyendo",
+      "error": "Error"
     },
-    "lastUpdated": ""
-  },
-  "contact": {
-    "heading": "",
-    "form": {
-      "name": "",
-      "email": "",
-      "message": "",
-      "submit": "",
-      "success": "",
-      "error": ""
-    }
+    "lastUpdated": "Actualizado {time}"
   },
   "footer": {
-    "rights": "",
-    "builtWith": ""
+    "rights": "© {year} {name}. Todos los derechos reservados.",
+    "builtWith": "Hecho con Next.js",
+    "cta": "Construyamos algo increíble juntos",
+    "ctaButton": "Contáctame"
   }
 }

@@ -7,7 +7,7 @@ export type GithubMetrics = {
   repos: number
   stars: number
   contributions: number
-  lastCommit: string
+  lastCommit: string | null
 }
 
 export type NpmMetrics = {
@@ -16,12 +16,12 @@ export type NpmMetrics = {
 
 export type UptimeStatus = "up" | "degraded" | "down"
 
-export type DeployStatus = "ready" | "error" | "building"
+export type DeployStatus = "ready" | "building" | "error"
 
 export type MetricsResponse = {
-  github: GithubMetrics
-  npm: NpmMetrics
-  uptime: { status: UptimeStatus; label: string }
-  deploy: { status: DeployStatus; label: string }
+  github: GithubMetrics | null
+  npm: NpmMetrics | null
+  uptime: { status: UptimeStatus; uptimePercent: number } | null
+  deploy: { status: DeployStatus; lastDeploy: string | null } | null
   fetchedAt: number
 }

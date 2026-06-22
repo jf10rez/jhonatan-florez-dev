@@ -18,6 +18,16 @@ export type NavSection = {
 
 export type Brand = "personal"
 
+export type UptimeProvider = "betterstack" | "uptimerobot" | "none"
+
+export type DeployPlatform = "vercel" | "cloudflare" | "none"
+
+export type MetricsConfig = {
+  uptimeProvider: UptimeProvider
+  uptimeApiUrl: string | null
+  deployPlatform: DeployPlatform
+}
+
 export type SiteConfig = {
   name: string
   role: string
@@ -27,17 +37,18 @@ export type SiteConfig = {
   palette: Palette
   nav: NavSection[]
   brand: Brand
+  metrics: MetricsConfig
 }
 
 export const siteConfig: SiteConfig = {
   name: "Jhonatan Florez",
   role: "Full Stack Engineer",
   domain: "jhonatan.dev",
-  email: "hello@jhonatan.dev",
+  email: "jhonatan-florez@ilaxus.com",
   social: {
-    github: "https://github.com/jhonatanflorez",
-    npm: "https://www.npmjs.com/~jhonatanflorez",
-    linkedin: "https://www.linkedin.com/in/jhonatanflorez",
+    github: "https://github.com/jf10rez",
+    npm: "https://www.npmjs.com/~jf10rez",
+    linkedin: "https://www.linkedin.com/in/jhonatan-florez-0ba28316b",
   },
   palette: {
     bg: "#050505",
@@ -46,14 +57,15 @@ export const siteConfig: SiteConfig = {
     secondary: "#a1a1aa",
   },
   nav: [
+    { id: "hero", labelKey: "nav.hero" },
     { id: "about", labelKey: "nav.about" },
-    { id: "principles", labelKey: "nav.principles" },
-    { id: "experience", labelKey: "nav.experience" },
-    { id: "systems", labelKey: "nav.systems" },
-    { id: "selected-work", labelKey: "nav.selectedWork" },
-    { id: "infrastructure", labelKey: "nav.infrastructure" },
-    { id: "live-metrics", labelKey: "nav.liveMetrics" },
+    { id: "projects", labelKey: "nav.projects" },
     { id: "contact", labelKey: "nav.contact" },
   ],
   brand: "personal",
+  metrics: {
+    uptimeProvider: "none",
+    uptimeApiUrl: null,
+    deployPlatform: "none",
+  },
 }

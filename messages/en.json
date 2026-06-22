@@ -1,116 +1,195 @@
 {
+  "metadata": {
+    "title": "Jhonatan Florez — Full Stack Engineer",
+    "description": "Portfolio of Jhonatan Florez, a Full Stack Engineer specialized in Next.js, React, TypeScript, Node.js, Docker, PostgreSQL, AI systems and cloud infrastructure."
+  },
   "nav": {
-    "about": "",
-    "principles": "",
-    "experience": "",
-    "systems": "",
-    "selectedWork": "",
-    "infrastructure": "",
-    "liveMetrics": "",
-    "contact": ""
+    "hero": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
   },
   "hero": {
-    "name": "",
-    "role": "",
-    "valueProposition": "",
-    "viewProjects": "",
-    "downloadResume": "",
+    "hello": "Hello, I'm",
+    "name": "JHONATAN FLOREZ",
+    "role": "Full Stack Engineer — AI Systems & Automation",
+    "valueProposition": "I design and build production-grade systems that combine clean architecture, automation, and AI to solve real business problems.",
+    "viewProjects": "View Projects",
+    "downloadResume": "Download Resume",
     "currently": {
-      "label": "",
+      "label": "Currently",
       "items": {
-        "aiAgents": "",
-        "infrastructure": "",
-        "saasProducts": ""
+        "aiAgents": "Building AI Agents",
+        "infrastructure": "Managing Production Infrastructure",
+        "saasProducts": "Developing SaaS Products"
       }
     }
   },
   "about": {
-    "heading": "",
-    "paragraph": "",
+    "heading": "About Me",
+    "moreAbout": "More About Me",
+    "paragraph": "I partner with teams to turn complex requirements into reliable software: scalable backends, polished interfaces, and infrastructure that does not wake you up at 3am.",
     "metrics": {
-      "yearsExperience": "",
-      "projectsDelivered": "",
-      "systemsDeployed": "",
-      "technologies": ""
-    }
-  },
-  "principles": {
-    "heading": "",
-    "items": {
-      "maintainability": "",
-      "automate": "",
-      "measure": "",
-      "ship": ""
+      "yearsExperience": "Years Experience",
+      "projectsDelivered": "Projects Delivered",
+      "systemsDeployed": "Systems Deployed",
+      "technologies": "Technologies"
     }
   },
   "experience": {
-    "heading": "",
-    "challenge": "",
-    "actions": "",
-    "results": ""
+    "heading": "Experience",
+    "challenge": "Challenge",
+    "actions": "Actions",
+    "results": "Results",
+    "items": {
+      "integro": {
+        "challenge": "Lead the development of scalable fullstack solutions and AI automations for enterprise clients.",
+        "action1": "Designed and developed web applications with Next.js, TypeScript and serverless architectures.",
+        "action2": "Implemented AI automation systems to optimize business processes.",
+        "action3": "Managed cloud infrastructure and CI/CD pipelines on AWS.",
+        "result1": "Delivered multiple enterprise projects with high impact.",
+        "result2": "3+ years of continuous experience at the company."
+      },
+      "dms": {
+        "challenge": "Develop quality software for diverse clients under tight deadlines.",
+        "action1": "Developed fullstack applications with React and Node.js.",
+        "action2": "Collaborated on database architecture and performance optimization.",
+        "result1": "Successfully delivered multiple projects.",
+        "result2": "7 months of significant contributions."
+      },
+      "confacaldas": {
+        "challenge": "Modernize internal systems and improve digital experience for users.",
+        "action1": "Developed responsive web interfaces with React.",
+        "action2": "Implemented RESTful APIs and integrations with legacy systems.",
+        "result1": "Improved user experience on internal platforms.",
+        "result2": "7 months of continuous development."
+      },
+      "syqual10": {
+        "challenge": "Build scalable software solutions for enterprise clients.",
+        "action1": "Developed web applications with React and Angular.",
+        "action2": "Implemented backend with Node.js and NoSQL databases.",
+        "result1": "Delivered robust solutions for clients.",
+        "result2": "9 months of agile development experience."
+      },
+      "2share": {
+        "challenge": "Develop SharePoint solutions for corporate clients.",
+        "action1": "Programmed custom web parts and SharePoint solutions.",
+        "action2": "Implemented workflows and automations with .NET.",
+        "result1": "Delivered custom SharePoint solutions.",
+        "result2": "5 months of specialized development."
+      },
+      "doctus": {
+        "challenge": "Develop digital health platform from its inception.",
+        "action1": "Built user interfaces with React.",
+        "action2": "Developed backend APIs and services with Node.js.",
+        "result1": "Contributed to platform launch.",
+        "result2": "7 months of fullstack development."
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "available": "Available for new opportunities",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Message sent. I will get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailInvalid": "Enter a valid email",
+      "messageMin": "Message must be at least 20 characters"
+    },
+    "social": {
+      "github": "GitHub",
+      "npm": "npm",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
   },
   "systems": {
-    "heading": "",
+    "heading": "Projects",
     "tier": {
-      "full": "",
-      "architecture": "",
-      "development": ""
+      "full": "Full Case Study",
+      "architecture": "Architecture Case Study",
+      "development": "In Development"
     },
-    "problem": "",
-    "solution": "",
-    "impact": "",
+    "problem": "Problem",
+    "solution": "Solution",
+    "impact": "Impact",
     "links": {
-      "repo": "",
-      "npm": "",
-      "demo": ""
+      "repo": "GitHub",
+      "npm": "npm",
+      "demo": "Demo"
     },
     "status": {
-      "private": "",
-      "deployed": "",
-      "inDevelopment": ""
+      "private": "Private",
+      "deployed": "Deployed",
+      "inDevelopment": "In Development"
+    },
+    "items": {
+      "ilaxus": {
+        "problem": "Businesses need to automate repetitive processes and integrate AI into their workflows, but lack the technical expertise to implement it.",
+        "solution": "AI automation agency that designs and implements custom solutions using n8n, Make, OpenAI and other no-code/low-code tools to optimize business processes.",
+        "impact": "Companies that automate their processes with AI, reducing operational time and increasing efficiency.",
+        "metric": "CEO & Founder"
+      },
+      "aiChatbot": {
+        "problem": "[TODO] Add the real problem the chatbot solved.",
+        "solution": "[TODO] Add the real solution and key design decisions.",
+        "impact": "[TODO] Add the real impact.",
+        "metric": "[TODO]"
+      },
+      "openclaw": {
+        "problem": "[TODO] Add the real problem the agent system solved.",
+        "solution": "[TODO] Add the real solution and key design decisions.",
+        "impact": "[TODO] Add the real impact.",
+        "metric": "[TODO]"
+      },
+      "langPlatform": {
+        "problem": "[TODO] Add the real problem the platform addresses.",
+        "solution": "[TODO] Add the planned solution and architecture.",
+        "impact": "[TODO] Add the expected impact."
+      }
     }
   },
   "selectedWork": {
-    "heading": "",
-    "ndaLabel": ""
-  },
-  "infrastructure": {
-    "heading": "",
-    "nodeDescriptions": {}
+    "heading": "Selected Work",
+    "ndaLabel": "Work done at {company} — code under NDA",
+    "roleLabel": "Role",
+    "viewProject": "View project"
   },
   "liveMetrics": {
-    "heading": "",
+    "heading": "Live Metrics",
+    "live": "Live",
     "github": {
-      "repos": "",
-      "stars": "",
-      "contributions": "",
-      "lastCommit": ""
+      "repos": "Public Repos",
+      "stars": "Stars",
+      "contributions": "Contributions",
+      "lastCommit": "Last Commit"
     },
     "npm": {
-      "weeklyDownloads": ""
+      "weeklyDownloads": "Weekly Downloads"
     },
-    "uptime": "",
-    "deploy": "",
+    "uptime": "Uptime",
+    "deploy": "Deploy",
     "status": {
-      "up": "",
-      "degraded": "",
-      "down": ""
+      "up": "Operational",
+      "degraded": "Degraded",
+      "down": "Down",
+      "ready": "Ready",
+      "building": "Building",
+      "error": "Error"
     },
-    "lastUpdated": ""
-  },
-  "contact": {
-    "heading": "",
-    "form": {
-      "name": "",
-      "email": "",
-      "message": "",
-      "submit": "",
-      "success": "",
-      "error": ""
-    }
+    "lastUpdated": "Updated {time}"
   },
   "footer": {
-    "rights": "",
-    "builtWith": ""
+    "rights": "© {year} {name}. All rights reserved.",
+    "builtWith": "Built with Next.js",
+    "cta": "Let's build something amazing together",
+    "ctaButton": "Get in Touch"
   }
 }

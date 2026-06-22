@@ -8,7 +8,10 @@ export function useScramble<T extends HTMLElement = HTMLElement>(
   duration = 1,
 ) {
   const ref = useRef<T | null>(null)
-  const [done, setDone] = useState(false)
+  const [done, setDone] = useState(() =>
+    typeof window !== "undefined" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  )
 
   useEffect(() => {
     const el = ref.current
@@ -16,7 +19,6 @@ export function useScramble<T extends HTMLElement = HTMLElement>(
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       el.textContent = finalText
-      setDone(true)
       return
     }
 

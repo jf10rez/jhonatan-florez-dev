@@ -1,7 +1,8 @@
 "use client"
 
 import { useLocale } from "next-intl"
-import { useRouter, usePathname } from "@/i18n/navigation"
+
+import { usePathname, useRouter } from "@/i18n/navigation"
 import { routing } from "@/i18n/routing"
 
 export function LangSwitch() {
@@ -11,7 +12,8 @@ export function LangSwitch() {
 
   const switchTo = (next: (typeof routing.locales)[number]) => {
     if (next === locale) return
-    router.replace(pathname, { locale: next })
+    const hash = typeof window !== "undefined" ? window.location.hash : ""
+    router.replace(`${pathname}${hash}`, { locale: next })
   }
 
   return (

@@ -6,8 +6,8 @@ export type AboutMetrics = {
 }
 
 export const about: AboutMetrics = {
-  yearsExperience: 0,
-  projectsDelivered: 0,
-  systemsDeployed: 0,
-  technologies: 0,
+  yearsExperience: 7,
+  projectsDelivered: 24,
+  systemsDeployed: 12,
+  technologies: 18,
 }
